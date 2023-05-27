@@ -79,22 +79,24 @@ const VideoDetails = () => {
     }
 
     return (
-        <div className='flex mt-4 ml-4 gap-8'>
-            <div className='video-player-container flex-[2]'>
+        <div className='flex mt-4 ml-4 gap-8 flex-col-reverse md:flex-row'>
+            <div className='video-player-container md:flex-[2]'>
+                <div className='h-[70vh] w-[93vw] md:h-[65vh] md:w-[65vw]'>
                 <ReactPlayer
                     ref={videoPlayer}
                     url={videolink}
                     onProgress={handleProgress}
-                    height="65vh"
-                    width="65vw"
+                    height="100%"
+                    width="100%"
                     controls
                 />
+                </div>
                 <div className='space-y-3 pr-4'>
                     <p className='text-3xl mt-2 font-semibold'>{videotitle}</p>
                     <p className='font-medium text-gray-600'>{videodescription.slice(7, 400)}</p>
                 </div>
             </div>
-            <div className='flex-[1] shadow-md mr-8'>
+            <div className='md:flex-[1] shadow-md mr-8'>
 
 
                 <div className='w-[80%] px-8 pt-2'>

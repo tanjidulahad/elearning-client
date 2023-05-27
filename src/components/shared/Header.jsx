@@ -26,7 +26,7 @@ const Header = () => {
     return (
         <div className='flex justify-between px-10 py-4 shadow-md'>
             <div>
-                <img onClick={()=>navigation("/")} className='w-48 cursor-pointer' src="https://interactivecares-courses.com/wp-content/uploads/2021/03/IC-logo-Telda.png" alt="" />
+                <img onClick={()=>navigation("/")} className='w-32 sm:w-48 cursor-pointer' src="https://interactivecares-courses.com/wp-content/uploads/2021/03/IC-logo-Telda.png" alt="" />
             </div>
             <div className='flex items-center gap-10 '>
 
@@ -34,7 +34,7 @@ const Header = () => {
                     <p onClick={() => navigation("/auth")} className='text-lg font-semibold bg-[#18B3C7] text-white px-3 py-1 rounded-sm cursor-pointer'>SignIn</p>
                     :
                     <>
-                        <p onClick={() => navigation("/wishlist")} className='text-lg font-semibold cursor-pointer'>Wishlist</p>
+                        <p onClick={() => navigation("/wishlist")} className='text-base sm:text-lg font-semibold cursor-pointer'>Wishlist</p>
                         <div >
 
                             <Dropdown menu={{ items }} trigger={['hover']} placement="bottom">

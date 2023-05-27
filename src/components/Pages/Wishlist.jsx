@@ -24,13 +24,13 @@ const Wishlist = () => {
     
     return (
         <div className='mx-10 pb-64'>
-            <h2 className='text-3xl my-10 font-bold text-gray-600 italic text-center'>Bookmarked Videos</h2>
+            <h2 className='text-lg sm:text-2xl md:text-3xl my-10 font-bold text-gray-600 italic text-center'>Bookmarked Videos</h2>
             {isLoading ?
                 <div className='h-[60vh] flex items-center justify-center'>
                     <p className='text-xl font-medium text-gray-500'>Loading...</p>
                 </div>
                 :
-                videos?.data?.length > 0 ? <div className='grid grid-cols-4 gap-10'>
+                videos?.data?.length > 0 ? <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10'>
                     {
                         videos?.data?.map((video, idx) => (
                             <Product key={idx} data={video} fromWishlist={true} handleRemoveFromWishlist={handleRemoveFromWishlist}/>

@@ -43,20 +43,20 @@ const Home = () => {
     return (
         <div className='mx-10 pb-64'>
             <div className='flex justify-between items-center'>
-                <div className='flex-[3]'>
-                    <h2 className='text-3xl my-10 font-bold text-gray-600 italic'>Interactive Learning</h2>
+                <div className='flex-[1] lg:flex-[3]'>
+                    <h2 className='text-sm md:text-3xl my-10 font-bold text-gray-600 italic'>Interactive Learning</h2>
                 </div>
-                {isLoggedinUser && <div className='flex-[1]'>
-                    <div>
-                        <p className='text-xl font-medium'>Completed</p>
+                {isLoggedinUser && <div className='flex-[1] lg:flex-[1]'>
+                    <div >
+                        <p className='text-sm md:text-xl font-medium hidden sm:block'>Completed</p>
                     </div>
-                    <div className='flex gap-2 text-lg font-medium'>
+                    <div className='flex gap-2 text-sm md:text-lg font-medium pt-3 sm:pt-0'>
                         <p>{WatchedVideos?.data?`${WatchedVideos?.data?.watchedvideos?.length}/10`:"0/10"}</p>
-                        <Progress status='active' strokeColor="#18B3C7" percent={(WatchedVideos?.data?.watchedvideos?.length / 10) * 100} format={(percent) => <p className='text-xl'>{`${percent} %`}</p>} />
+                        <Progress status='active' strokeColor="#18B3C7" percent={(WatchedVideos?.data?.watchedvideos?.length / 10) * 100} format={(percent) => <p className='text-sm md:text-xl'>{`${percent} %`}</p>} />
                     </div>
                 </div>}
             </div>
-            <div className='grid grid-cols-4 gap-10'>
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10'>
                 {
                     videos?.map((video, idx) => (
                         <Product key={idx} data={video} handleAddToWishlist={handleAddToWishlist} handleRemoveFromWishlist={handleRemoveFromWishlist}/>
