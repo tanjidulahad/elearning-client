@@ -18,7 +18,7 @@ const Product = ({data,fromWishlist=false,handleRemoveFromWishlist,handleAddToWi
         if(isLoggedinUser){
             navigation(`/details/${data.videoid}`,{ state: { videolink: data.videolink,videotitle: data.title,videodescription:data.description } })
         }else{
-            toast.error("Please signin to wath this video.")
+            toast.error("Please signin to watch this video.")
         }
         
     }
