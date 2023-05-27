@@ -4,7 +4,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 export const authenticationApi = createApi({
   reducerPath: 'authenticationApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:4000/api/' }),
+  baseQuery: fetchBaseQuery({ baseUrl: 'https://elarning-server.onrender.com/api/' }),
   endpoints: (builder) => ({
     userSignup: builder.mutation({
       query: (data) => ({
